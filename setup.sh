@@ -30,16 +30,10 @@ touch database/database.sqlite
 echo "Criando tabelas no banco de dados local"
 php artisan migrate
 
-echo "Criando o admin no banco de dados local"
-php artisan db:seed
-
 echo "Limpando o cache do Laravel"
 php artisan config:clear
 php artisan cache:clear
 php artisan view:clear
-
-echo "Linkando o storage com o public"
-php artisan storage:link
 
 echo "Processo concluído."
 read -p "Pressione [Enter] para continuar..."
